@@ -7,11 +7,6 @@ import { Hero } from './interfaces/hero.interface';
 export class AppController {
   constructor(private readonly appService: AppService) {}
 
-  // @Get('/asd')
-  // getHello(){
-  //   return "Hello"
-  // }
-
   @Get()
   getMany(): Observable<Hero[]> {
     return this.appService.getMany();
